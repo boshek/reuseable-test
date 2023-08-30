@@ -6,7 +6,7 @@ on:
 jobs:
   cm-job: 
     uses: ./.github/workflows/cm-job.yml
-  setup-quarto-r:
+  setup-quarto:
     runs-on: ubuntu-22.04
     needs: [cm-job] 
 
