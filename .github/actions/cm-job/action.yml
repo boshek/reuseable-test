@@ -3,13 +3,8 @@ description: "A composite action that runs a Quarto command."
 
 runs:
   using: "composite"
-
-jobs:
-  setup:
-    runs-on: ubuntu-22.04
-    
-    steps:
-      - name: Setup Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          version: '1.3.450'
+  steps:
+    - name: Setup Quarto
+      uses: quarto-dev/quarto-actions/setup@v2
+      with:
+        version: '1.3.450'
