@@ -1,8 +1,4 @@
 name: cm-job
-
-on:
-  workflow_call:
-
 jobs:
   setup:
     runs-on: ubuntu-22.04
