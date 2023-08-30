@@ -1,7 +1,9 @@
+name: cm-job
+description: "A composite action that runs a Quarto command."
+
 runs:
   using: "composite"
 
-name: cm-job
 jobs:
   setup:
     runs-on: ubuntu-22.04
