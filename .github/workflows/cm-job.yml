@@ -1,7 +1,7 @@
 name: cm-job
 
 on:
-  push:
+  workflow_call:
 
 jobs:
   setup:
