@@ -4,14 +4,13 @@ on:
   push:
 
 jobs:
-  cm-job: 
-    uses: ./.github/workflows/cm-job.yml
   setup-quarto:
     runs-on: ubuntu-22.04
-    needs: [cm-job] 
 
     steps:
       - uses: actions/checkout@v3
+      - name: run custom action
+        uses: ./.github/actions/cm-job.yml
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
         with:
