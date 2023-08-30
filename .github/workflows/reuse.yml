@@ -8,6 +8,7 @@ jobs:
     uses: ./.github/workflows/cm-job.yml
   setup-quarto-r:
     runs-on: ubuntu-22.04
+    needs: [cm-job] 
 
     steps:
       - uses: actions/checkout@v3
