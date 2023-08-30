@@ -1,3 +1,6 @@
+runs:
+  using: "composite"
+
 name: cm-job
 jobs:
   setup:
