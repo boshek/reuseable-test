@@ -3,7 +3,7 @@ description: "A composite action that runs a Quarto command."
 
 runs:
   using: "composite"
-
+  
 inputs:
   myInput:
     description: "An input variable"
@@ -11,4 +11,6 @@ inputs:
     default: "defaultValue"
 
 steps:
-  - run: echo "The value of myInput is ${{ inputs.myInput }}"
+  - run: echo "The value of myInput is ${{ env.MY_INPUT }}"
+    env:
+      MY_INPUT: ${{ inputs.myInput }}
