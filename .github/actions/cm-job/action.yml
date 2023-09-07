@@ -12,3 +12,8 @@ runs:
   steps:
     - run: echo "The value of myInput is ${{ inputs.myInput }}"
       shell: bash
+    
+    - run: |
+         mkdir ${{ inputs.myInput }}"
+         ls -alh
+      shell: bash
