@@ -1,10 +1,19 @@
 name: cm-job
 description: "A composite action that runs a Quarto command."
 
+inputs:
+  myInput:
+    description: "An input variable"
+    required: true
+    default: "defaultValue"
+
 runs:
   using: "composite"
   steps:
-    - name: Setup Quarto
-      uses: quarto-dev/quarto-actions/setup@v2
-      with:
-        version: '1.3.450'
+    - run: echo "The value of myInput is ${{ inputs.myInput }}"
+      shell: bash
+    
+    - run: |
+         mkdir ${{ inputs.myInput }}"
+         ls -alh
+      shell: bash
