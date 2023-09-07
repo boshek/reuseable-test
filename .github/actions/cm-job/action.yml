@@ -8,3 +8,9 @@ runs:
       uses: quarto-dev/quarto-actions/setup@v2
       with:
         version: '1.3.450'
+
+    - name: "A step"
+      env:
+        BRANCH_REF: "${{ github.ref }}"
+      run: echo "The branch is $BRANCH_REF"
+      shell: bash
