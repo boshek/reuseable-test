@@ -3,7 +3,6 @@ description: "A composite action that runs a Quarto command."
 
 runs:
   using: "composite"
-  steps:
 
 inputs:
   myInput:
